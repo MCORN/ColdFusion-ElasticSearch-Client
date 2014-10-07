@@ -42,7 +42,7 @@ component extends="Response" accessors="true" {
 											.setSource(getBody().hits.hits[h]["_source"]);
 											
 				if(structKeyExists(getBody().hits.hits[h],"highlight"))
-					SearchHit.setHighlight(getBody().hits.hits[h]["highlight"])
+					SearchHit.setHighlight(getBody().hits.hits[h]["highlight"]);
 					
 				getHits().addHit(SearchHit);
 			}

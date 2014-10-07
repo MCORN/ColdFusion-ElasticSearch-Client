@@ -3,12 +3,10 @@
 **/
 component accessors="true" {
 
-	this.SEARCH_TYPES = "query_and_fetch,query_then_fetch,dfs_query_and_fetch,dfs_query_then_fetch,count,scan";
-
 	property name="Indexes" type="array";
 	property name="Types" type="array";
 	property name="SearchType" type="string" default="query_then_fetch";
-	property name="Query" type="IQuery";
+	property name="Query" type="string";
 	property name="Filters" type="array";
 	property name="Modifiers" type="array";
 	property name="Facet" type="FacetBuilder";
@@ -19,6 +17,7 @@ component accessors="true" {
 	property name="ClusterManager" type="ClusterManager";
 
 	public SearchRequest function init(){
+		this.SEARCH_TYPES = "query_and_fetch,query_then_fetch,dfs_query_and_fetch,dfs_query_then_fetch,count,scan";
 		variables.Types = [];
 		variables.Indexes = [];
 		variables.Filters = [];
@@ -89,9 +88,9 @@ component accessors="true" {
 		var resource = urlIndexes & urlTypes & "_search?search_type=" & getSearchType();
 
 		return getClusterManager().doRequest(endpoint=getClusterManager().getEndPoint(),
-											  resource = resource,
-											  method="POST",
-											  body=searchString(),
-											  responseType="SearchResponse");
+											resource = resource,
+											method="POST",
+											body=searchString(),
+											responseType="SearchResponse");
 	}
 }

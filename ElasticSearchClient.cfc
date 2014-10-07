@@ -30,19 +30,19 @@ component accessors="true" extends="Base" {
 	}
 
 	public IndexRequest function prepareIndex(string index="", string type="", string id=""){
-		var index = new requests.IndexRequest(ClusterManager=getClusterManager());
-			index.setIndex(arguments.index);
-			index.setType(arguments.type);
-			index.setId(arguments.id);
-		return index;
+		var index3 = new requests.IndexRequest(ClusterManager=getClusterManager());
+			index3.setIndex(arguments.index);
+			index3.setType(arguments.type);
+			index3.setId(arguments.id);
+		return index3;
 	}
 	
 	public MappingRequest function prepareMapping(required string index, required string type, required elasticsearch.indexing.TypeMapping typeMapping){
-		var index = new requests.MappingRequest(ClusterManager=getClusterManager());
-			index.setIndex(arguments.index);
-			index.setType(arguments.type);
-			index.setBody(typeMapping.getJson());
-		return index;
+		var index2 = new requests.MappingRequest(ClusterManager=getClusterManager());
+			index2.setIndex(arguments.index);
+			index2.setType(arguments.type);
+			index2.setBody(typeMapping.getJson());
+		return index2;
 	}
 
 	public BulkRequest function prepareBulk(boolean Transactional=false){

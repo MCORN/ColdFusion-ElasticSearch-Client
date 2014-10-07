@@ -14,8 +14,8 @@ component accessors="true" implements="IResponse"{
 	public void function handleResponse(){
 
 		var _httpResponse = arguments[1];
-		
-		setStatusCode(_httpResponse.status_code);
+
+		setStatusCode(_httpResponse.statuscode);
 		setStatus(_httpResponse.StatusCode);
 		setBody(deserializeJSON(_httpResponse.FileContent));
 		setHeaders(_httpResponse.responseHeader);

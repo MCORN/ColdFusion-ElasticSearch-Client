@@ -16,7 +16,7 @@ component accessors="true"{
 		return '[#tempList#]';
 	}
 
-	public function onMissingMethod(required string MissingMethodName, required array MissingMethodArguments){
+	public function onMissingMethod(required string MissingMethodName, required MissingMethodArguments){
 		variables[arguments.MissingMethodName] = Arguments.MissingMethodArguments[1];
 		return this;
 	}

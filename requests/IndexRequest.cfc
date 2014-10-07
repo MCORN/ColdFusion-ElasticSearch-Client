@@ -8,7 +8,7 @@ component accessors="true" {
 	property name="ClusterManager" type="ClusterManager";
 
 	public IndexRequest function init(required ClusterManager ClusterManager){
-		variables.ClusterManager = arguments.ClusterManager
+		variables.ClusterManager = arguments.ClusterManager;
 		return this;
 	}
 
