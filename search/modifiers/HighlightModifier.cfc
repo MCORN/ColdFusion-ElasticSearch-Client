@@ -1,5 +1,3 @@
-
-
 component accessors="true" extends="BaseModifier" implements="IModifier"{
 
 	property name="fields" type="array" default =[];

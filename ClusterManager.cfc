@@ -13,16 +13,16 @@ component accessors="true"{
 	}
 
 	private ClusterManager function loadConfigFromString(required any nodeConfig){
-		/*
-			config = [{
+		
+			/*config = [{
 				host = "",
 				port = "",
 				path = "",
 				secure = "",
 				username = "",
 				password = ""
-			}]
-		*/
+			}];*/
+		
 		var config = "";
 		if(isSimpleValue(arguments.nodeConfig) && len(trim(arguments.nodeConfig))){
 			if(isJson(arguments.nodeConfig)){

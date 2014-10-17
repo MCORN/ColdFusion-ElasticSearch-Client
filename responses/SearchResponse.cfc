@@ -7,7 +7,6 @@ component extends="Response" accessors="true" {
 	property name="TimedOut";
 	property name="SuccessfulShards";
 	property name="TotalShards";
-	property name="FailedShards";
 
 	public SearchResponse function init(){
 		setHits(new SearchHits());
