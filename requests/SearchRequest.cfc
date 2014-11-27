@@ -81,7 +81,7 @@ component accessors="true" {
 	}
 
 
-	public SearchResponse function execute(){
+	public elasticsearch.responses.SearchResponse function execute(){
 		var urlIndexes = Len(getIndexes()[1]) > 0 ? ArrayToList(getIndexes()) & "/" : "";
 		var urlTypes = Len(getTypes()[1]) > 0 ? ArrayToList(getTypes()) & "/" : "";
 		

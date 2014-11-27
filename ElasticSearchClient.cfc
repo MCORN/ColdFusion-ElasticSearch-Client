@@ -15,7 +15,7 @@ component accessors="true" extends="Base" {
 		return new search.filters.FilterBuilder();
 	}
 
-	public QueryBuilder function queryBuilder(){
+	public search.queries.QueryBuilder function queryBuilder(){
 		return new search.queries.QueryBuilder();
 	}
 
@@ -23,7 +23,7 @@ component accessors="true" extends="Base" {
 		return new search.facets.FacetBuilder();
 	}
 
-	public SearchRequest function prepareSearch(){
+	public requests.SearchRequest function prepareSearch(){
 		var search = new requests.SearchRequest(argumentCollection=arguments);
 			search.setClusterManager(getClusterManager());
 		return search;
